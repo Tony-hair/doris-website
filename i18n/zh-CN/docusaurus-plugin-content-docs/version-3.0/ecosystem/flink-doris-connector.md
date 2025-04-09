@@ -231,7 +231,7 @@ CREATE TABLE students (
     WITH (
       'connector' = 'doris',
       'fenodes' = '127.0.0.1:8030',  -- Fe的host:HttpPort
-      'table.identifier' = 'test.students',
+      'table.identifier' = 'test.student', -- 需要table名字和doris里名字相同
       'username' = 'root',
       'password' = ''
 );
@@ -250,7 +250,7 @@ CREATE TABLE students (
     WITH (
       'connector' = 'doris',
       'fenodes' = '{fe.conf:http_port}', 
-      'table.identifier' = 'test.students',
+      'table.identifier' = 'test.student', 
       'source.use-flight-sql' = 'true',
       'source.flight-sql-port' = '{fe.conf:arrow_flight_sql_port}',
       'username' = 'root',
